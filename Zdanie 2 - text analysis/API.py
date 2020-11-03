@@ -8,6 +8,12 @@ def analysis(text):
 	lowercase = sum(map(str.islower, text))
 	number = sum(map(str.isdigit, text))
 	special = len(text) - len( re.findall('[\w]', text))
-    return 
+	result = {
+		"Number of uppercase characters: " : uppercase,
+		"Number of lowercase characters: " : lowercase,
+		"Number of number characters: " : number,
+		"Number of special characters: " : special}
+
+    return result
      
 app.run()
