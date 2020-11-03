@@ -5,6 +5,7 @@ app = flask.Flask(__name__)
 @app.route('/analysis/<text>', methods=['GET'])
 def analysis(text):
 	uppercase = sum(map(str.isupper, text))
+	lowercase = sum(map(str.islower, text))
 
     return 
      
