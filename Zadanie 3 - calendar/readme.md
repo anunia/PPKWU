@@ -1,9 +1,9 @@
-#Details
+# Details
 API returns calendar. 
 
-#Endpoint
+# Endpoint
 `/calendar/<year>/<month>` 
 where `<month>` represents month to be returned from the year `<year>`.
 
-#Response
+# Response
 Automatically downloading file ICS containing calendar informations.
