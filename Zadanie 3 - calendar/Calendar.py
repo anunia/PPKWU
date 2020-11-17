@@ -1,5 +1,6 @@
 import flask
 import ics
+import bs4
 
 app = flask.Flask(__name__)
 
