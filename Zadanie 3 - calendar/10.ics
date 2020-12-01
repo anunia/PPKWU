@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DTSTART:20201001T000000Z
+SUMMARY:Wielka Integracja WIP
+UID:bb0399dc-2932-40e9-8339-ecbbeb86c6a8@bb03.org
+URL:https://www.facebook.com/events/381849316135778/?active_tab=discussion
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20201001T000000Z
+SUMMARY:Wielka Integracja WIP
+UID:3fad8fb2-cd32-4d77-8988-f7f43a5dcf47@3fad.org
+URL:https://www.facebook.com/events/381849316135778/?active_tab=discussion
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20201010T000000Z
+SUMMARY:Wielka Integracja WIP
+UID:a7cf1587-c1f5-4693-a2d2-2968d200fa61@a7cf.org
+URL:https://www.facebook.com/events/381849316135778/?active_tab=discussion
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20201001T000000Z
+SUMMARY:Akcja Integracja Online
+UID:7f05ba3f-4a43-4ed7-a77f-865f2ba96c48@7f05.org
+URL:https://facebook.com/events/s/akcja-integracja-odkryj-z-nami/3041545625959235/?ti=as
+END:VEVENT
+END:VCALENDAR
