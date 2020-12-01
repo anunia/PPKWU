@@ -1,27 +1,28 @@
-# Details
+# MOBILNY KALENDARZ WEEIA
+## Details
 API returns informations of chosen month in ICS/iCal format from `http://www.weeia.p.lodz.pl` calendar. 
 
-# Endpoint
+## Endpoint
 
-## Request
+### Request
 `GET /calendar` 
 
 
-## Response
+### Response
 Automatically downloading file ICS containing calendar informations from chosen month.
 
-## Request
+### Request
 `GET /calendar/<year>/<month>` 
 where `<month>` represents month to be returned from the year `<year>`.
 
-## Response
+### Response
 Automatically downloading file ICS containing calendar informations from chosen month.
 
-# Example 
-## Request
+## Example 
+### Request
 `GET /calendar/2020/10`
 
-## Response
+### Response
 ```BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
