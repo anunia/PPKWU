@@ -30,10 +30,16 @@ def get_info(year, month):
     html = BeautifulSoup(info.read())
     selected_elements = html.select(event_selector)
     
-    c = Calendar()
+    c = ics.Calendar()
 
+    for event in selected_elements:
+        e = ics.Event()
+        e.name = event.select(title_selector)[0].getText()
+        day_and_url = event.select(day_and_url_selector)[0]
+        e.begin = "{}-{}-{}".format(year, month, day_and_url.getText())
+        e.url = day_and_url["href"]
         
-    return html  
+    return c  
    
    
 app.run()
