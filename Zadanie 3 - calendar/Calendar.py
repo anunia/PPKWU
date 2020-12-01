@@ -38,6 +38,7 @@ def get_info(year, month):
         day_and_url = event.select(day_and_url_selector)[0]
         e.begin = "{}-{}-{}".format(year, month, day_and_url.getText())
         e.url = day_and_url["href"]
+        c.events.add(e)
         
     return c  
    
