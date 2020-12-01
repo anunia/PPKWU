@@ -1,0 +1,58 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DTSTART:20200319T000000Z
+SUMMARY:Matura próbna Chemia rozszerzona
+UID:1ba9a348-cb82-4fd2-9e5e-76466e368459@1ba9.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200317T000000Z
+SUMMARY:Matura próbna Matematyka rozszerzona
+UID:d510c6c2-9d4e-4762-bf66-59b02e17418d@d510.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200313T000000Z
+SUMMARY:Finał konkursu InfoSukces
+UID:f8d94f17-04aa-4201-811e-f31406b56551@f8d9.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200318T000000Z
+SUMMARY:Matura próbna Fizyka rozszerzona
+UID:f705e196-281b-4ba3-b601-957e1f9ec031@f705.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200327T000000Z
+SUMMARY:Finał konkursu Piękne doświadczenie\, Fascynujące Wyjaśnienie
+UID:924ec614-0358-44df-b15d-a14a7f5d20cd@924e.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200316T000000Z
+SUMMARY:Matura próbna Matematyka podstawowa
+UID:58984582-be41-4149-ac33-65b3de35826e@5898.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200323T000000Z
+SUMMARY:Finał konkursu Fascynująca Fizyka - poziom podstawowy
+UID:09fd17ad-dd96-4384-96aa-aff67d735c47@09fd.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200301T000000Z
+SUMMARY:First Step to Fields Medal
+UID:f9269a04-a134-408d-8066-6cd31bc123ac@f926.org
+URL:javascript:void()\;
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200325T000000Z
+SUMMARY:Finał konkursu Fascynująca Fizyka - poziom ponadpodstawowy
+UID:788b8fa0-6138-41e7-8e8b-4fd6bf78239e@788b.org
+URL:javascript:void()\;
+END:VEVENT
+END:VCALENDAR
