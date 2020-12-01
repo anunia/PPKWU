@@ -23,7 +23,8 @@ Automatically downloading file ICS containing calendar informations from chosen 
 `GET /calendar/2020/10`
 
 ### Response
-```BEGIN:VCALENDAR
+```
+BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
@@ -50,4 +51,5 @@ SUMMARY:Wielka Integracja WIP
 UID:c89143c5-48e1-42d7-a866-aacf07e40ff4@c891.org
 URL:https://www.facebook.com/events/381849316135778/?active_tab=discussion
 END:VEVENT
-END:VCALENDAR```
+END:VCALENDAR
+```
