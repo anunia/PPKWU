@@ -30,6 +30,8 @@ def get_info(year, month):
     html = BeautifulSoup(info.read())
     selected_elements = html.select(event_selector)
     
+    c = Calendar()
+
         
     return html  
    
