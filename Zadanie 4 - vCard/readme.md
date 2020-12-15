@@ -5,7 +5,7 @@ API returns contact informations to the service provider of chosen category and 
 ## Endpoint
 
 ### Request
-
+`GET /contact/<category>/<location>` 
 
 
 ### Response
