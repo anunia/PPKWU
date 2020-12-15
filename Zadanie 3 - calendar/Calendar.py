@@ -22,23 +22,9 @@ def calendar_current_month():
           
 def get_info(year, month):  
     url = "http://www.weeia.p.lodz.pl/pliki_strony_kontroler/kalendarz.php?rok={}&miesiac={}&lang=1".format(year, month)
-    event_selector = "#kalendarz td.active"
-    title_selector = "#kalendarz .InnerBox"
-    day_and_url_selector = "#kalendarz a"
-    
-    info = urlopen(url)
-    html = BeautifulSoup(info.read())
-    selected_elements = html.select(event_selector)
-    
-    c = ics.Calendar()
+    event_selector = "#company-list card.company-item.py-2.container.my-2"
+    title_selector = "#company-list "
 
-    for event in selected_elements:
-        e = ics.Event()
-        e.name = event.select(title_selector)[0].getText()
-        day_and_url = event.select(day_and_url_selector)[0]
-        e.begin = "{}-{}-{}".format(year, month, day_and_url.getText())
-        e.url = day_and_url["href"]
-        c.events.add(e)
         
     return c  
    
