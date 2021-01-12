@@ -23,6 +23,18 @@ def button(company):
             <input type="hidden" name="address" value=\"""" + company["address"] + """\" />
         </form>
     """
+@app.route("/vcard", methods = ["POST"])
+def vcard():
+    vc = vCard()
+    
+    vc.add("fn")
+    vc.fn.value = request.form.get("name")
+    vc.add("tel")
+    vc.tel.value = request.form.get("phone")
+    vc.add("email")
+    vc.email.value = request.form.get("mail")
+
+    return vc.serialize()
 
 def get_info(category, location):  
     url = "https://panoramafirm.pl/szukaj?k={}&l={}".format(category, location)
