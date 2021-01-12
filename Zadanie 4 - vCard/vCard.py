@@ -38,7 +38,18 @@ def get_info(category, location):
         
     return str(tab)
 def page(content):
-
+    page = """
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Mobilny vCard</title>
+        </head>
+        <body>
+            """ + content + """
+        </body>
+        </html>
+    """
     return page
     
    
