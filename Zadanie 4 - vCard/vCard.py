@@ -11,10 +11,10 @@ def hello():
 @app.route('/contact/<category>/<location>', methods=['GET'])
 def contact(category,location):
     result = get_info(category, location)
-    return 0
+    return result
 
 def get_info(category, location):  
-    url = "https://panoramafirm.pl/szukaj?k={}y&l={}".format(category, location)
+    url = "https://panoramafirm.pl/szukaj?k={}&l={}".format(category, location)
     company_selector = "#company-list li.company-item"
     name_selector = "a.company-name"
     address_selector = "div.address"
@@ -29,7 +29,6 @@ def get_info(category, location):
     tab = []
 
     for card in selected_elements:
-        print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
         tab.append({
             "name" : card.select(name_selector)[0].getText(),
             "address": card.select(address_selector)[0],
@@ -37,7 +36,10 @@ def get_info(category, location):
             "mail":  card.select(email_selector)[0]
         })
         
-    return str("selected_elements")    
+    return str(tab)
+def page(content):
 
+    return page
+    
    
 app.run()
