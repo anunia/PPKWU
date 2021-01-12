@@ -1,10 +1,12 @@
 import flask
-import vcard
+import vobject
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
 
 app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET'])
-def hrllo():
+def hello():
     return "Hello"
 @app.route('/contact/<category>/<location>', methods=['GET'])
 def contact(category,location):
@@ -13,22 +15,29 @@ def contact(category,location):
 
 def get_info(category, location):  
     url = "https://panoramafirm.pl/szukaj?k={}y&l={}".format(category, location)
-    list_selector = "#company-list .card.company-item.py-2.container.my-2"
-    name_selector = "#company-list [title = \"Zobacz informacje szczegółowe o firmie\"]"
-    address_selector = "#company-list .address"
-    number_selector = "#company-list .icon-telephone.addax.addax-cs_hl_phonenumber_click"
-    url_selector = "#company-list .icon-website.addax addax-cs_hl_hit_homepagelink_click"
-    email_selector = "#company-list .ajax-modal-link.icon-envelope cursor-pointer.addax addax-cs_hl_email_submit_click"
+    company_selector = "#company-list li.company-item"
+    name_selector = "a.company-name"
+    address_selector = "div.address"
+    number_selector = "a.icon-telephone"
+
+    email_selector = "a.icon-envelope"
 
     info = urlopen(url)
-    html = BeautifulSoup(info.read())
-    selected_elements = html.select(list_selector)
+    html = BeautifulSoup(info.read(), "html.parser")
+    selected_elements = html.select(company_selector)
     
-    c = []
+    tab = []
 
-    for contact in selected_elements:
-       c
+    for card in selected_elements:
+        print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+        tab.append({
+            "name" : card.select(name_selector)[0].getText(),
+            "address": card.select(address_selector)[0],
+            "phone": card.select(number_selector)[0],
+            "mail":  card.select(email_selector)[0]
+        })
         
-    return 0  
+    return str("selected_elements")    
+
    
 app.run()
