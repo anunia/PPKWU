@@ -13,6 +13,17 @@ def contact(category,location):
     result = get_info(category, location)
     return result
 
+def button(company):
+    return """
+        <form method="post" action="/vcard">
+            <input type="submit" value="Wizytówka" />
+            <input type="hidden" name="name" value=\"""" + company["name"] + """\" />
+            <input type="hidden" name="mail" value=\"""" + company["mail"] + """\" />
+            <input type="hidden" name="phone" value=\"""" + company["phone"] + """\" />
+            <input type="hidden" name="address" value=\"""" + company["address"] + """\" />
+        </form>
+    """
+
 def get_info(category, location):  
     url = "https://panoramafirm.pl/szukaj?k={}&l={}".format(category, location)
     company_selector = "#company-list li.company-item"
